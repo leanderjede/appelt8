@@ -440,7 +440,14 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <div className="bg-wood-200 px-2 py-10 bg-cover bg-center rounded-lg overflow-hidden" style={{ backgroundImage: "url('/img/WhatsApp Bild 2025-04-25 um 08.58.11_862e7dd2.jpg')" }}>
+      <div className="bg-wood-200 px-2 py-10 bg-cover bg-center rounded-lg overflow-hidden"   style={{
+    backgroundImage: "url('/img/WhatsApp Bild 2025-04-25 um 08.58.11_862e7dd2.jpg')",
+    backgroundSize: "auto",               // wichtig, sonst skaliert es
+    backgroundRepeat: "repeat",           // Wiederholung aktivieren
+    backgroundPosition: "top left",       // optional
+  }}
+
+>
         <div id="features" className="mx-auto max-w-6xl">
           <motion.div
             initial="hidden"
@@ -467,31 +474,32 @@ export default function Home() {
               className="mt-16 grid grid-cols-1 gap-6 text-center md:grid-cols-2 xl:grid-cols-3"
               variants={containerVariants}
             >
-              {services.map((item, index) => (
-             <motion.li
-             key={index}
-             className="group rounded-xl cursor-pointer  bg-[url('/n4.jpeg')] bg-cover bg-center px-6 py-8 shadow-sm transition-all duration-300 ease-in-out hover:border-2 hover:border-[#efc987] hover:shadow-lg"
-             onClick={() => router.push(item.link)}
-             variants={itemVariants}
-             whileHover={{ scale: 1.03 }}
-           >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-10 mx-auto transition-colors duration-300 group-hover:text-[#efc987]"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                  </svg>
-                
-                  <h3 className="my-3 font-display  text-[#473a22] font-bold">{item.title}</h3>
-                  <p className="mt-1.5 text-sm leading-6 text-black font-semibold">
-                    {item.description}
-                  </p>
-                </motion.li>
-              ))}
+        {services.map((item, index) => (
+  <motion.li
+    key={index}
+    className="group rounded-xl cursor-pointer bg-gradient-to-b from-white to-[#f5f5dc] px-6 py-8 shadow-sm transition-all duration-300 ease-in-out hover:border-2 hover:border-[#efc987] hover:shadow-lg"
+    onClick={() => router.push(item.link)}
+    variants={itemVariants}
+    whileHover={{ scale: 1.03 }}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="size-10 mx-auto transition-colors duration-300 group-hover:text-[#efc987]"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+    </svg>
+
+    <h3 className="my-3 font-display text-[#473a22] font-bold">{item.title}</h3>
+    <p className="mt-1.5 text-sm leading-6 text-black font-semibold">
+      {item.description}
+    </p>
+  </motion.li>
+))}
+
             </motion.ul>
           </motion.div>
         </div>

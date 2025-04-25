@@ -25,6 +25,20 @@
 }
 
 
+.background {
+  background-image: url('/img/WhatsApp Bild 2025-04-25 um 08.58.11_862e7dd2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .background {
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: top left;
+  }
+}
 
 
 * {
