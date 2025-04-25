@@ -1,5 +1,6 @@
 'use client'
 
+
 import { motion, AnimatePresence } from "framer-motion";
 import PartnerSlider from "./component/Ui/PartnerSwiper";
 import Image from "next/image";
@@ -26,71 +27,68 @@ const services = [
     title: "Kostenlose Erstberatung und Besichtigung vor Ort",
     link: "/service/Kostenlose",
     description: "Wir bieten Ihnen eine kostenlose Erstberatung und Besichtigung vor Ort, um Ihre Anforderungen genau zu verstehen und maßgeschneiderte Lösungen zu entwickeln.",
-    imageUrl: "/navimg/download.jpg"
+    imageUrl: "/serv/talk.png"
   },
   {
     title: "Trockenbau- und Putzarbeiten",
     link: "/service/trockenbau-putzarbeiten",
     description: "Professionelle Trockenbau- und Putzarbeiten zur Gestaltung und Renovierung Ihrer Räume mit hochwertigen Materialien.",
-    imageUrl: "/navimg/2.jpg"
+    imageUrl: "/serv/drywall (3).png"
   },
   {
     title: "Malerarbeiten",
     link: "/service/malerarbeiten",
     description: "Fachgerechte Malerarbeiten für Innen- und Außenbereiche, die Ihrem Raum neues Leben verleihen.",
-    imageUrl: "/navimg/3.jpg"
+    imageUrl: "/serv/paint-brush.png"
   },
-  {
-    title: "Verlegen von medizinischen PVC-Böden",
-    link: "/service/medizinische-pvc-boeden",
-    description: "Spezialisierte Verlegung von medizinischen PVC-Böden für sterile und hygienische Umgebungen.",
-    imageUrl: "/navimg/4.jpg"
-  },
+   
   {
     title: "Verlegen von Bodenfliesen",
     link: "/service/bodenfliesen",
     description: "Präzises Verlegen von Bodenfliesen für eine langlebige und ästhetische Bodenlösung.",
-    imageUrl: "/navimg/5.jpg"
+    imageUrl: "/serv/tile (2).png"
   },
   {
     title: "Gießen von Estrichböden sowie Ausgleichsmasse",
     link: "/service/estrichboeden-ausgleichsmasse",
     description: "Fachgerechtes Gießen von Estrichböden und Ausgleichsmasse für ebene und belastbare Untergründe.",
-    imageUrl: "/navimg/6.jpg"
+    imageUrl: "/serv/concrete.png"
   },
   {
     title: "Verlegen von Holzböden (Dielen, Parkett)",
     link: "/service/holzboden-verlegen",
     description: "Verlegung hochwertiger Holzböden wie Dielen und Parkett für ein edles Ambiente.",
-    imageUrl: "/navimg/7.jpg"
+    imageUrl: "/serv/wood (1).png"
   },
   {
     title: "Verlegen von Laminat- und Vinylböden",
     link: "/service/laminat-vinylboden",
     description: "Robuste Laminat- und Vinylböden für eine strapazierfähige und pflegeleichte Lösung.",
-    imageUrl: "/navimg/8.jpg"
+    imageUrl: "/serv/construction (2).png"
   },
   {
     title: "Verlegen von PVC-Böden",
     link: "/service/pvc-boeden",
     description: "Kostengünstige und praktische PVC-Böden für verschiedene Anwendungsbereiche.",
-    imageUrl: "/navimg/9.jpg"
+    imageUrl: "/serv/floor.png"
   },
   {
     title: "Mauerwerkstrockenlegung",
     link: "/service/mauerwerkstrockenlegung",
     description: "Effiziente Trockenlegung von feuchtem Mauerwerk zur Vermeidung von Feuchtigkeitsschäden.",
-    imageUrl: "/navimg/10.jpg"
+    imageUrl: "/serv/wall.png"
   },
   {
     title: "Deckenbalkensanierung",
     link: "/service/deckenbalkensanierung",
-    description: "Sanierung und Instandsetzung beschädigter Deckenbalken für stabile und sichere Strukturen."
+    description: "Sanierung und Instandsetzung beschädigter Deckenbalken für stabile und sichere Strukturen.",
+    imageUrl: "/serv/wall.png"
   },
   {
     title: "Bekämpfung von Pilz- und Schädlingsbefall",
     link: "/service/pilz-schaedlingsbekaempfung",
-    description: "Spezialisierte Bekämpfung von Pilz- und Schädlingsbefall zur Erhaltung der Bausubstanz."
+    description: "Spezialisierte Bekämpfung von Pilz- und Schädlingsbefall zur Erhaltung der Bausubstanz.",
+    imageUrl: "/serv/pest-control.png"
   },
 
 ];
@@ -449,59 +447,81 @@ export default function Home() {
 
 >
         <div id="features" className="mx-auto max-w-6xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportSettings}
-            variants={containerVariants}
-          >
-            <motion.p 
-              className="text-center text-base font-semibold leading-7 text-white"
-              variants={fadeIn}
-            >
-        
-            </motion.p>
-            
-            <motion.h2
-  className="text-center font-display text-3xl font-bold tracking-tight text-black md:text-4xl"
-  variants={slideInFromRight}
+        <motion.div
+  initial="hidden"
+  whileInView="visible"
+  viewport={viewportSettings}
+  variants={containerVariants}
 >
-  Alles aus einer Hand
-</motion.h2>
-
-            
-            <motion.ul 
-              className="mt-16 grid grid-cols-1 gap-6 text-center md:grid-cols-2 xl:grid-cols-3"
-              variants={containerVariants}
-            >
-        {services.map((item, index) => (
-  <motion.li
-    key={index}
-    className="group rounded-xl cursor-pointer bg-gradient-to-b from-white to-[#f5f5dc] px-6 py-8 shadow-sm transition-all duration-300 ease-in-out hover:border-2 hover:border-[#efc987] hover:shadow-lg"
-    onClick={() => router.push(item.link)}
-    variants={itemVariants}
-    whileHover={{ scale: 1.03 }}
+  <motion.p 
+    className="text-center text-base font-semibold leading-7 text-white"
+    variants={fadeIn}
   >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="size-10 mx-auto transition-colors duration-300 group-hover:text-[#efc987]"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-    </svg>
+  </motion.p>
 
-    <h3 className="my-3 font-display text-[#473a22] font-bold">{item.title}</h3>
-    <p className="mt-1.5 text-sm leading-6 text-black font-semibold">
-      {item.description}
-    </p>
-  </motion.li>
-))}
+  <motion.h2
+    className="text-center font-display text-3xl font-bold tracking-tight text-black md:text-4xl"
+    variants={slideInFromRight}
+  >
+    Alles aus einer Hand
+  </motion.h2>
 
-            </motion.ul>
-          </motion.div>
+  <motion.ul 
+    className="mt-16 grid grid-cols-1 gap-6 text-center md:grid-cols-2 xl:grid-cols-3"
+    variants={containerVariants}
+  >
+    {/* Die ersten 9 Elemente in einem Grid mit 3 Spalten */}
+    {services.slice(0, 9).map((item, index) => (
+      <motion.li
+        key={index}
+        className="group rounded-xl cursor-pointer bg-gradient-to-b from-white to-[#f5f5dc] px-6 py-8 shadow-sm transition-all duration-300 ease-in-out hover:border-2 hover:border-[#efc987] hover:shadow-lg"
+        onClick={() => router.push(item.link)}
+        variants={itemVariants}
+        whileHover={{ scale: 1.03 }}
+      >
+        {/* Dynamisches Bild für jedes Element */}
+        <img
+          src={item.imageUrl}  
+          alt={item.title}
+          className="size-10 mx-auto transition-colors duration-300 group-hover:text-[#efc987] rounded-md"
+        />
+
+        <h3 className="my-3 font-display text-[#473a22] font-bold">{item.title}</h3>
+        <p className="mt-1.5 text-sm leading-6 text-black font-semibold">
+          {item.description}
+        </p>
+      </motion.li>
+    ))}
+
+    {/* Für die letzten 2 Elemente, in einem flexbox-basierten Container, um sie zu zentrieren */}
+    {services.length > 9 && (
+      <motion.div className="xl:flex xl:justify-center xl:col-span-3 gap-6">
+        {services.slice(9).map((item, index) => (
+          <motion.li
+            key={index + 9}
+            className="group rounded-xl cursor-pointer bg-gradient-to-b from-white to-[#f5f5dc] px-6 py-8 shadow-sm transition-all duration-300 ease-in-out hover:border-2 hover:border-[#efc987] hover:shadow-lg"
+            onClick={() => router.push(item.link)}
+            variants={itemVariants}
+            whileHover={{ scale: 1.03 }}
+          >
+            {/* Dynamisches Bild für jedes Element */}
+            <img
+              src={item.imageUrl}  
+              alt={item.title}
+              className="size-10 mx-auto transition-colors duration-300 group-hover:text-[#efc987] rounded-md"
+            />
+
+            <h3 className="my-3 font-display text-[#473a22] font-bold">{item.title}</h3>
+            <p className="mt-1.5 text-sm leading-6 text-black font-semibold">
+              {item.description}
+            </p>
+          </motion.li>
+        ))}
+      </motion.div>
+    )}
+  </motion.ul>
+</motion.div>
+
         </div>
       </div>
 
