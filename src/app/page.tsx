@@ -82,7 +82,7 @@ const services = [
     title: "Deckenbalkensanierung",
     link: "/service/deckenbalkensanierung",
     description: "Sanierung und Instandsetzung beschädigter Deckenbalken für stabile und sichere Strukturen.",
-    imageUrl: "/serv/wall.png"
+    imageUrl: "/serv/beam (1).png"
   },
   {
     title: "Bekämpfung von Pilz- und Schädlingsbefall",
