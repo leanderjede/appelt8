@@ -78,6 +78,8 @@ const services = [
     description: "Effiziente Trockenlegung von feuchtem Mauerwerk zur Vermeidung von Feuchtigkeitsschäden.",
     imageUrl: "/serv/wall.png"
   },
+
+  
   {
     title: "Deckenbalkensanierung",
     link: "/service/deckenbalkensanierung",
@@ -90,6 +92,28 @@ const services = [
     description: "Spezialisierte Bekämpfung von Pilz- und Schädlingsbefall zur Erhaltung der Bausubstanz.",
     imageUrl: "/serv/pest-control.png"
   },
+
+  {
+    title: "Einbau und Austausch von Türen",
+    link: "/service/tueren",
+    description: "Fachgerechter Einbau und Austausch von Innen- und Außentüren für bessere Sicherheit, Optik und Funktionalität.",
+    imageUrl: "/serv/door.png"
+  },
+  
+  {
+    title: "Einbau und Austausch von Fenstern",
+    link: "/service/fenster",
+    description: "Professioneller Einbau und Austausch von Fenstern für optimalen Wärmeschutz, Schallschutz und modernes Design.",
+    imageUrl: "/serv/window.png"
+  },
+  
+  {
+    title: "Einbau und Austausch von Dachfenstern",
+    link: "/service/dachfenster",
+    description: "Individuelle Lösungen für den Einbau und Austausch von Dachfenstern – für mehr Licht, Luft und Wohnkomfort im Dachgeschoss.",
+    imageUrl: "/serv/window (1).png"
+  },
+  
 
 ];
 /* 
@@ -393,7 +417,7 @@ export default function Home() {
                     </svg>
                   ),
                   title: "Effizienz",
-                  description: "Wir sind eine innovative Zimmerei, die Design, Nachhaltigkeit und modernste Fertigungstechnologien vereint. Durch den gezielten Einsatz hochwertiger Materialien und effizienter Produktionsmethoden optimieren wir Zeit und Ergebnisse."
+                  description: "Wir sind ein innovatives Bauunternehmen, das Design, Nachhaltigkeit und modernste Fertigungstechnologien vereint. Durch den gezielten Einsatz hochwertiger Materialien und effizienter Produktionsmethoden optimieren wir Zeit und Ergebnisse."
                 },
                 {
                   icon: (
@@ -402,7 +426,7 @@ export default function Home() {
                     </svg>
                   ),
                   title: "Erfahrung",
-                  description: "Unsere langjährige Erfahrung und fundierte Fachkompetenz im Zimmererhandwerk ermöglichen es uns, maßgeschneiderte Lösungen für unterschiedlichste Bauprojekte zu realisieren."
+                  description: "Unsere langjährige Erfahrung und fundierte Fachkompetenz im Handwerk ermöglichen es uns, maßgeschneiderte Lösungen für unterschiedlichste Bauprojekte zu realisieren."
                 },
                 {
                   icon: (
@@ -446,83 +470,81 @@ export default function Home() {
   }}
 
 >
-        <div id="features" className="mx-auto max-w-6xl">
-        <motion.div
-  initial="hidden"
-  whileInView="visible"
-  viewport={viewportSettings}
-  variants={containerVariants}
->
-  <motion.p 
-    className="text-center text-base font-semibold leading-7 text-white"
-    variants={fadeIn}
-  >
-  </motion.p>
-
-  <motion.h2
-    className="text-center font-display text-3xl font-bold tracking-tight text-black md:text-4xl"
-    variants={slideInFromRight}
-  >
-    Alles aus einer Hand
-  </motion.h2>
-
-  <motion.ul 
-    className="mt-16 grid grid-cols-1 gap-6 text-center md:grid-cols-2 xl:grid-cols-3"
+<div id="features" className="mx-auto max-w-6xl">
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={viewportSettings}
     variants={containerVariants}
   >
-    {/* Die ersten 9 Elemente in einem Grid mit 3 Spalten */}
-    {services.slice(0, 9).map((item, index) => (
-      <motion.li
-        key={index}
-        className="group rounded-xl cursor-pointer bg-gradient-to-b from-white to-[#f5f5dc] px-6 py-8 shadow-sm transition-all duration-300 ease-in-out hover:border-2 hover:border-[#efc987] hover:shadow-lg"
-        onClick={() => router.push(item.link)}
-        variants={itemVariants}
-        whileHover={{ scale: 1.03 }}
-      >
-        {/* Dynamisches Bild für jedes Element */}
-        <img
-          src={item.imageUrl}  
-          alt={item.title}
-          className="size-10 mx-auto transition-colors duration-300 group-hover:text-[#efc987] rounded-md"
-        />
+    <motion.p 
+      className="text-center text-base font-semibold leading-7 text-white"
+      variants={fadeIn}
+    >
+    </motion.p>
 
-        <h3 className="my-3 font-display text-[#473a22] font-bold">{item.title}</h3>
-        <p className="mt-1.5 text-sm leading-6 text-black font-semibold">
-          {item.description}
-        </p>
-      </motion.li>
-    ))}
+    <motion.h2
+      className="text-center font-display text-3xl font-bold tracking-tight text-black md:text-4xl"
+      variants={slideInFromRight}
+    >
+      Alles aus einer Hand
+    </motion.h2>
 
-    {/* Für die letzten 2 Elemente, in einem flexbox-basierten Container, um sie zu zentrieren */}
-    {services.length > 9 && (
-      <motion.div className="xl:flex xl:justify-center xl:col-span-3 gap-6">
-        {services.slice(9).map((item, index) => (
-          <motion.li
-            key={index + 9}
-            className="group rounded-xl cursor-pointer bg-gradient-to-b from-white to-[#f5f5dc] px-6 py-8 shadow-sm transition-all duration-300 ease-in-out hover:border-2 hover:border-[#efc987] hover:shadow-lg"
-            onClick={() => router.push(item.link)}
-            variants={itemVariants}
-            whileHover={{ scale: 1.03 }}
-          >
-            {/* Dynamisches Bild für jedes Element */}
-            <img
-              src={item.imageUrl}  
-              alt={item.title}
-              className="size-10 mx-auto transition-colors duration-300 group-hover:text-[#efc987] rounded-md"
-            />
+    {/* Grid für die ersten 12 Leistungen */}
+    <motion.ul 
+      className="mt-16 grid grid-cols-1 gap-6 text-center md:grid-cols-2 xl:grid-cols-3"
+      variants={containerVariants}
+    >
+      {services.slice(0, 12).map((item, index) => (
+        <motion.li
+          key={index}
+          className="group rounded-xl cursor-pointer bg-gradient-to-b from-white to-[#f5f5dc] px-6 py-8 shadow-sm transition-all duration-300 ease-in-out hover:border-2 hover:border-[#efc987] hover:shadow-lg"
+          onClick={() => router.push(item.link)}
+          variants={itemVariants} // <<< fade-in auch hier
+          whileHover={{ scale: 1.03 }}
+        >
+          <img
+            src={item.imageUrl}
+            alt={item.title}
+            className="size-10 mx-auto transition-colors duration-300 group-hover:text-[#efc987] rounded-md"
+          />
+          <h3 className="my-3 font-display text-[#473a22] font-bold">{item.title}</h3>
+          <p className="mt-1.5 text-sm leading-6 text-black font-semibold">
+            {item.description}
+          </p>
+        </motion.li>
+      ))}
+    </motion.ul>
 
-            <h3 className="my-3 font-display text-[#473a22] font-bold">{item.title}</h3>
-            <p className="mt-1.5 text-sm leading-6 text-black font-semibold">
-              {item.description}
-            </p>
-          </motion.li>
-        ))}
-      </motion.div>
-    )}
-  </motion.ul>
-</motion.div>
+    {/* Letzte 2 Leistungen mit eigenem Fade-in */}
+    <motion.div 
+      className="mt-8 flex justify-center gap-6"
+      variants={fadeIn} // <<< wichtig: das hier! (damit der ganze Block einfadet)
+    >
+      {services.slice(12).map((item, index) => (
+        <motion.li
+          key={index + 12}
+          className="group w-[40%] rounded-xl cursor-pointer bg-gradient-to-b from-white to-[#f5f5dc] px-6 py-8 shadow-sm transition-all duration-300 ease-in-out hover:border-2 hover:border-[#efc987] hover:shadow-lg list-none"
+          onClick={() => router.push(item.link)}
+          variants={itemVariants} // <<< auch hier pro Item
+          whileHover={{ scale: 1.03 }}
+        >
+          <img
+            src={item.imageUrl}
+            alt={item.title}
+            className="size-10 mx-auto transition-colors duration-300 group-hover:text-[#efc987] rounded-md"
+          />
+          <h3 className="my-3 font-display text-[#473a22] font-bold">{item.title}</h3>
+          <p className="mt-1.5 text-sm leading-6 text-black font-semibold">
+            {item.description}
+          </p>
+        </motion.li>
+      ))}
+    </motion.div>
+  </motion.div>
+</div>
 
-        </div>
+
       </div>
 
       {/* Partner Slider */}

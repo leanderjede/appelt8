@@ -53,7 +53,7 @@ const GoogleReviews = () => {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-900">Unsere zufriedenen Kunden</h2>
         <div className="w-16 h-1 bg-green-500 mx-auto my-3"></div>
-        <p className="text-lg text-gray-700 font-semibold">Appelt-Bauservice- Zimmermann und Zimmerei Berlin</p>
+        <p className="text-lg text-gray-700 font-semibold">Appelt-Bauservice- Berlin</p>
 
         <div className="mt-4 text-gray-900 flex items-center justify-center space-x-2">
           <span className="text-3xl font-bold">5,0</span>

@@ -24,12 +24,7 @@ const services = [
     description: "Fachgerechte Malerarbeiten für Innen- und Außenbereiche, die Ihrem Raum neues Leben verleihen.",
     imageUrl: "/navimg/3.jpg"
   },
-  {
-    title: "Verlegen von medizinischen PVC-Böden",
-    link: "/service/medizinische-pvc-boeden",
-    description: "Spezialisierte Verlegung von medizinischen PVC-Böden für sterile und hygienische Umgebungen.",
-    imageUrl: "/navimg/4.jpg"
-  },
+ 
   {
     title: "Verlegen von Bodenfliesen",
     link: "/service/bodenfliesen",
@@ -75,6 +70,27 @@ const services = [
     title: "Bekämpfung von Pilz- und Schädlingsbefall",
     link: "/service/pilz-schaedlingsbekaempfung",
     description: "Spezialisierte Bekämpfung von Pilz- und Schädlingsbefall zur Erhaltung der Bausubstanz."
+  },
+
+  {
+    title: "Einbau und Austausch von Türen",
+    link: "/service/tueren",
+    description: "Fachgerechter Einbau und Austausch von Innen- und Außentüren für bessere Sicherheit, Optik und Funktionalität.",
+   
+  },
+  
+  {
+    title: "Einbau und Austausch von Fenstern",
+    link: "/service/fenster",
+    description: "Professioneller Einbau und Austausch von Fenstern für optimalen Wärmeschutz, Schallschutz und modernes Design.",
+   
+  },
+  
+  {
+    title: "Einbau und Austausch von Dachfenstern",
+    link: "/service/dachfenster",
+    description: "Individuelle Lösungen für den Einbau und Austausch von Dachfenstern – für mehr Licht, Luft und Wohnkomfort im Dachgeschoss.",
+   
   },
   
   
